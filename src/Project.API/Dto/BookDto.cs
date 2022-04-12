@@ -1,11 +1,13 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Project.API.Extensions;
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 
 namespace Project.API.Dto
 {
+    //uncomment this line if you use IFormFile in ImageUpload
     //[ModelBinder(BinderType = typeof(BookModelBinder))]
     public class BookDto
     {
@@ -23,9 +25,8 @@ namespace Project.API.Dto
         [StringLength(500, ErrorMessage = "The {0} field must be between {2} and {1} characters", MinimumLength = 2)]
         public string Resume { get; set; }
 
-        //Avoid the error of converting empty string to IFormFile
-        [JsonIgnore]
-        public IFormFile ImageUpload { get; set; }
+        //Change to IFormFile if u want to use another upload type 
+        public string ImageUpload { get; set; }
         public string Image { get; set; }
 
         [Required(ErrorMessage = "The {0} field is required")]

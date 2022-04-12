@@ -6,7 +6,7 @@ namespace Project.Business.Interfaces
 {
     public interface IUser
     {
-        string Name { get; set; }
+        string Name { get; }
         Guid GetUserId();
         string getUserEmail();
         bool IsAuthenticated();

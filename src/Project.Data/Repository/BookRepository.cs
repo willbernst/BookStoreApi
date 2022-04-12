@@ -15,7 +15,7 @@ namespace Project.Data.Repository
         public BookRepository(MyDbContext context) : base(context) { }
 
 
-        public async Task<Book> GetBooksSuplier(Guid supplierId)
+        public async Task<Book> GetBooksSupplier(Guid supplierId)
         {
             return await _dbContext.Books.AsNoTracking().Include(b => b.Supplier).FirstOrDefaultAsync(b => b.Id == supplierId);
         }

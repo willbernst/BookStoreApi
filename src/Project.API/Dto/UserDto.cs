@@ -37,6 +37,13 @@ namespace Project.API.Dto
         public IEnumerable<ClaimDto> Claims { get; set; }
     }
 
+    public class LoginResponseDto
+    {
+        public string AccessToken { get; set; }
+        public double ExpiresIn { get; set; }
+        public UserTokenDto UserToken { get; set; }
+    }
+
     public class ClaimDto
     {
         public string Value { get; set; }

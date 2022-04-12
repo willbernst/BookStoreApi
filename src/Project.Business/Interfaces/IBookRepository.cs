@@ -11,6 +11,6 @@ namespace Project.Business.Interfaces
     {
         Task<IEnumerable<Book>> GetBooksBySuppliers(Guid supplierId);
         Task<IEnumerable<Book>> GetBooksSuppliers();
-        Task<Book> GetBooksSuplier(Guid supplierId);
+        Task<Book> GetBooksSupplier(Guid supplierId);
     }
 }
