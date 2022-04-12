@@ -1,4 +1,4 @@
-﻿using HealthChecks.SqlServer;
+﻿using Project.API.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -24,7 +24,7 @@ namespace Project.API.Configuration
                     options.HeartbeatId = "API Suppliers";
                 })
                 .AddCheck("Books", new SqlServerHealthCheck(configuration.GetConnectionString("DefaultConnection")))
-                .AddSqlServer(configuration.GetConnectionString("DefaultConnection"), name: "Sql");
+                .AddSqlServer(configuration.GetConnectionString("DefaultConnection"), name: "BancoS");
 
             services.AddHealthChecksUI()
                 .AddSqlServerStorage(configuration.GetConnectionString("DefaultConnection"));

@@ -42,7 +42,7 @@ namespace Project.API.Configuration
             return services;
         }
 
-        public static IApplicationBuilder UserApiConfig(this IApplicationBuilder app, IWebHostEnvironment env)
+        public static IApplicationBuilder UseApiConfig(this IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {

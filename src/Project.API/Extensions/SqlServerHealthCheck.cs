@@ -18,7 +18,7 @@ namespace Project.API.Extensions
         {
             try
             {
-                using(var connection = new SqlConnection(_connection))
+                using (var connection = new SqlConnection(_connection))
                 {
                     await connection.OpenAsync(cancellationToken);
 

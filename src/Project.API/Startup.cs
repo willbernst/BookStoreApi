@@ -53,7 +53,7 @@ namespace Project.API
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IApiVersionDescriptionProvider provider)
         {
-            app.UserApiConfig(env);
+            app.UseApiConfig(env);
 
             app.UseSwaggerConfig(provider);
 
